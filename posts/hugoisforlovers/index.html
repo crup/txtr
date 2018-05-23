@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <title>txtr: A clean and minimal theme for Hugo with AMP support</title>
+  <meta name="if:Wide Images" content="1" />
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="https://crup.github.io/txtr/css/normalize.css" />
+  <link type="text/css" rel="stylesheet" href="https://crup.github.io/txtr/css/animate.css"  />
+  <link type="text/css" rel="stylesheet" href="https://crup.github.io/txtr/css/style.css"  />
+  <link type="text/css" rel="stylesheet" href="https://crup.github.io/txtr/css/syntax.css"  />
+  <link rel="canonical" href="https://crup.github.io/txtr/posts/hugoisforlovers/">
+  <link href="https://fonts.googleapis.com/css?family=Amiri|Kaushan+Script|Lato:400" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="https://crup.github.io/txtr/img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://crup.github.io/txtr/img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://crup.github.io/txtr/img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://crup.github.io/txtr/img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://crup.github.io/txtr/img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://crup.github.io/txtr/img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://crup.github.io/txtr/img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://crup.github.io/txtr/img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://crup.github.io/txtr/img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://crup.github.io/txtr/img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://crup.github.io/txtr/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://crup.github.io/txtr/img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://crup.github.io/txtr/img/favicon-16x16.png">
+  <link rel="manifest" href="https://crup.github.io/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://crup.github.io/txtr/img/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body class="animated fadeIn">
+  <header class="blog-header">
+    <div class="container">
+      <h1 class="logo">
+    	   <a href="https://crup.github.io/txtr">txtr</a>
+			</h1>
+      <nav>
+        
+          <a href='/txtr/about/' title="About">About</a>
+        
+          <a href='/txtr/contact/' title="Contact">Contact</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      
+<section id="main">
+  <h2 id="title">Getting Started with Hugo</h2>
+  <div>
+        <article id="content">
+           
+
+<h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
+
+<p>Go to <a href="https://github.com/spf13/hugo/releases">Hugo releases</a> and download the
+appropriate version for your OS and architecture.</p>
+
+<p>Save it somewhere specific as we will be using it in the next step.</p>
+
+<p>More complete instructions are available at <a href="https://gohugo.io/getting-started/installing/">Install Hugo</a></p>
+
+<h2 id="step-2-build-the-docs">Step 2. Build the Docs</h2>
+
+<p>Hugo has its own example site which happens to also be the documentation site
+you are reading right now.</p>
+
+<p>Follow the following steps:</p>
+
+<ol>
+<li>Clone the <a href="http://github.com/spf13/hugo">Hugo repository</a></li>
+<li>Go into the repo</li>
+<li>Run hugo in server mode and build the docs</li>
+<li>Open your browser to <a href="http://localhost:1313">http://localhost:1313</a></li>
+</ol>
+
+<p>Corresponding pseudo commands:</p>
+
+<pre><code>git clone https://github.com/spf13/hugo
+cd hugo
+/path/to/where/you/installed/hugo server --source=./docs
+&gt; 29 pages created
+&gt; 0 tags index created
+&gt; in 27 ms
+&gt; Web Server is available at http://localhost:1313
+&gt; Press ctrl+c to stop
+</code></pre>
+
+<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
+
+<h2 id="step-3-change-the-docs-site">Step 3. Change the docs site</h2>
+
+<p>Stop the Hugo process by hitting Ctrl+C.</p>
+
+<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
+
+<pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
+&gt; 29 pages created
+&gt; 0 tags index created
+&gt; in 27 ms
+&gt; Web Server is available at http://localhost:1313
+&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
+&gt; Press ctrl+c to stop
+</code></pre>
+
+<p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
+content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
+
+<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
+are located at the same relative location as the url, in our case
+<code>docs/content/overview/quickstart.md</code>.</p>
+
+<p>Change and save this file.. Notice what happened in your terminal.</p>
+
+<pre><code>&gt; Change detected, rebuilding site
+
+&gt; 29 pages created
+&gt; 0 tags index created
+&gt; in 26 ms
+</code></pre>
+
+<p>Refresh the browser and observe that the typo is now fixed.</p>
+
+<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building. I double dare you.
+Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
+
+<h2 id="step-4-have-fun">Step 4. Have fun</h2>
+
+<p>The best way to learn something is to play with it.</p>
+
+        </article>
+  </div>
+</section>
+<aside id="meta">
+    <div>
+    <section>
+      <h4 id="date"> Wed Apr 2, 2014 </h4>
+      <h5 id="wordcount"> 350 Words </h5>
+    </section>
+    
+    
+    <ul id="tags">
+      
+        <li> <a href="https://crup.github.io/txtr/tagsgo">go</a> </li>
+      
+        <li> <a href="https://crup.github.io/txtr/tagsgolang">golang</a> </li>
+      
+        <li> <a href="https://crup.github.io/txtr/tagshugo">hugo</a> </li>
+      
+        <li> <a href="https://crup.github.io/txtr/tagsdevelopment">development</a> </li>
+      
+    </ul>
+    
+    </div>
+    <div>
+        
+        
+          <a class="next" href="https://crup.github.io/txtr/posts/goisforlovers/"> (Hu)go Template Primer</a>
+        
+    </div>
+</aside>
+
+    </main>
+  </div>
+
+  <footer class="blog-footer">
+    <div class="about-layout">
+      <p class="about">My name is Barry Allen. Dr. Harrison taught me how to control my superpowers at <a href="https://en.wikipedia.org/wiki/S.T.A.R._Labs">S.T.A.R. Labs</a>.</p>
+    </div>
+    <p class="copy"> Copyright &copy; 2019</p>
+  </footer>
+</body>
+</html>
