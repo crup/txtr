@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <title>txtr: A clean and minimal theme for Hugo with AMP support</title>
+  <meta name="if:Wide Images" content="1" />
+  {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+  <link type="text/css" rel="stylesheet" href="{{ "css/normalize.css" | absURL }}" />
+  <link type="text/css" rel="stylesheet" href="{{ "css/animate.css" | absURL }}"  />
+  <link type="text/css" rel="stylesheet" href="{{ "css/style.css" | absURL }}"  />
+  <link type="text/css" rel="stylesheet" href="{{ "css/syntax.css" | absURL }}"  />
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link href="https://fonts.googleapis.com/css?family=Amiri|Kaushan+Script|Lato:400" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ "img/apple-icon-57x57.png" | absURL }}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ "img/apple-icon-60x60.png" | absURL }}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ "img/apple-icon-72x72.png" | absURL }}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ "img/apple-icon-76x76.png" | absURL }}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ "img/apple-icon-114x114.png" | absURL }}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ "img/apple-icon-120x120.png" | absURL }}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ "img/apple-icon-144x144.png" | absURL }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ "img/apple-icon-152x152.png" | absURL }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "img/apple-icon-180x180.png" | absURL }}">
+  <link rel="icon" type="image/png" sizes="192x192"  href="{{ "img/android-icon-192x192.png" | absURL }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "img/favicon-32x32.png" | absURL }}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ "img/favicon-96x96.png" | absURL }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "img/favicon-16x16.png" | absURL }}">
+  <link rel="manifest" href="{{ "/manifest.json" | absURL }}">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="{{ "img/ms-icon-144x144.png" | absURL }}">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body class="animated fadeIn">
+  <header class="blog-header">
+    <div class="container">
+      <h1 class="logo">
+    	   <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+			</h1>
+      <nav>
+        {{ range .Site.Menus.page }}
+          <a href='{{.URL}}' title="{{ .Name }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      {{ block "content" . }}{{ end }}
+    </main>
+  </div>
+
+  <footer class="blog-footer">
+    <div class="about-layout">
+      <p class="about">My name is Barry Allen. Dr. Harrison taught me how to control my superpowers at <a href="https://en.wikipedia.org/wiki/S.T.A.R._Labs">S.T.A.R. Labs</a>.</p>
+    </div>
+    <p class="copy"> Copyright &copy; 2019</p>
+  </footer>
+</body>
+</html>
